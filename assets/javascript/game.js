@@ -16,6 +16,8 @@ var cedarPointFood = ["Toft's Ice Cream Parlor", "Arctic Junction", "Happy Friar
 "Wagon Wheel Pizza", "Mr. Potato", "High Energy Station", "Frontier Inn", "Dragon's Inn", "Dive In", 
 "Corral", "Coasters", "Chickie's & Pete's"]
 
+var userText = document.getElementById("user-text");
+var Underscore = [];
 //print all coasters
 for (var i = 0; i < cedarPointRollerCoasters.length; i++) {
     console.log(cedarPointRollerCoasters[i]);
@@ -52,3 +54,22 @@ function randomSortFood() {
 randomSortCoasters()
 randomSortFood()
 randomSortRides()
+//replace the chosen word with underscores
+
+let generateUnderscore = () => {
+     for (let i = 0; i , randomSortCoasters.length; i++) {
+         Underscore.push("_");
+     }
+     return Underscore;
+ }
+ console.log(generateUnderscore());
+
+ //get players input
+ //document.addEventListener("keypress", (event))
+
+//console.log(event)
+
+//document.onkeyup = function(event) {
+ //   userText.textContent = event.key;
+ // };
+ // console.log(event)

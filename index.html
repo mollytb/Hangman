@@ -2,18 +2,37 @@
 <html>
   <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>Cedar Point Hangman</title>
   </head>
-  <body>
+  <body class="container bg-muted">
         <script src="assets/javascript/game.js"></script>
-    
-    <h1>Cedar Point Hangman</h1>
-    <h4>Press Any Key to Get Started</h4>
-    <P>Letters Guessed</P>
-    <p>Number of Guesses Left</p>
-    <p>You Win</p>
-    <p>You Lose</p>
+    <div class="Jumbotron">
+      <h1 class="text-center text-primary">Cedar Point<br>Hangman</h1>
+        <div class="text-center">
+          <img src="assets/images/Cedar_Point.jpg" alt="Cedar Point" height="250" width="auto">
+        </div>
+    </div> 
+    <div class="row">
+      <div class="col">
 
+      <h4 class="text-info text-center">Press Any Key to Get Started</h4>
+      <h2>You just typed <span id="user-text"><strong>...Nothing.</strong></span></h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col card text-white bg-danger">
+      <h5 class="card-title text-center">Incorrect Letters Guessed</h5>
+      <span></span>
+
+      </div>
+      <div class="col">
+      <p class="text-center">Number of Guesses Left</p>
+      </div>
+    </div>
+      <p class="text-success text-center">You Win</p>
+      <p class="text-danger text-center">You Lose</p>
+    </div>
   
   </body>
 </html>
