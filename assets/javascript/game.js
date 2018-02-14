@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
         randWord = wordBank[Math.floor(Math.random() * wordBank.length)];
         console.log(randWord);
         console.log(randWord.length)
-        
+        underScore = []
 
         for (var i = 0; i < randWord.length; i++) {
             underScore.push("_");
@@ -114,7 +114,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         }
         //!!!!!____________WTF____________am I doing here? isn't tracking wins
-        if (underScore === randWord.length)
+        if (goodGuess === randWord.length)
         {
             alert("You win! What excitement.");
             wins++;
