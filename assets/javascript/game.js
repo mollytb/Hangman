@@ -61,14 +61,13 @@ var losses = 0;
 // }
 
 document.addEventListener("DOMContentLoaded", function () {
-
+//start function works but not as a reset. adds two random words together and doesn't clear anything properly
     function startGame() {
         //picks word
         randWord = wordBank[Math.floor(Math.random() * wordBank.length)];
         console.log(randWord);
         console.log(randWord.length)
-        wrongGuessesLeft=10;
-        badBox=[];
+        
 
         for (var i = 0; i < randWord.length; i++) {
             underScore.push("_");
@@ -77,6 +76,10 @@ document.addEventListener("DOMContentLoaded", function () {
         //make underscores for word at start of game
         document.getElementById("underscore").textContent = underScore.join(" ");
         console.log(underScore);
+        //these reset the guesses and the letterbox almost properly
+        wrongGuessesLeft=10;
+        badBox=[];
+        
 
        
         
@@ -92,6 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (randWord[i] === userGuess) {
                     underScore[i] = userGuess;
                     console.log(underScore);
+                    //goodguess is useless and was supposed to be helpful but i don't remember how
                     goodGuess++;
                     
                     (goodGuess);
@@ -100,18 +104,24 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
         } 
+        //lose info
         if (wrongGuessesLeft === 0)
         {
             alert("You Lost! Sad day for you");
             losses++;
+            document.getElementById("losses").textContent = losses;
             startGame();
 
         }
+        //!!!!!____________WTF____________am I doing here? isn't tracking wins
         if (underScore === randWord.length)
         {
             alert("You win! What excitement.");
+            wins++;
+            document.getElementById("wins").textContent = wins;
             startGame();
         }
+        //badbox/letterbox works but has repaets and special keys
         document.getElementById("underscore").textContent = underScore;
         if (randWord.indexOf(userGuess) < 0)
         {
@@ -127,7 +137,7 @@ document.addEventListener("DOMContentLoaded", function () {
        
     }
     
-    console.log(badBox.length);
+    
     
 
     startGame();
