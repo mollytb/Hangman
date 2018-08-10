@@ -1,2 +1,1 @@
-# Hnagman
-hangman game
+Hangman game with a Cedar Point theme
