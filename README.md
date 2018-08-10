@@ -1,2 +1,2 @@
-# Hnagman
+# Hangman
 hangman game
